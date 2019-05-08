@@ -1,0 +1,7 @@
+Lock Table
+-----------------------------------
+Locking mencegah terjadinya deadlock (tidak bentrok)
+
+LOCK TABLE nama_tabel IN EXCLUSIVE MODE;
+
+LOCK TABLE mahasiswa IN EXCLUSIVE MODE;

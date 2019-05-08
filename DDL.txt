@@ -1,0 +1,67 @@
+DDL
+--------------------------
+
+CREATE
+--------------------------
+
+CREATE TABLE barang (
+	id_barang number PRIMARY KEY,
+	nama_barang avarchar2(50),
+	harga number,
+	stok int
+);
+
+
+DESCRIPTION
+--------------------------
+DESC barang;
+
+
+ALTER
+--------------------------
+ADD KEY->	ALTER TABLE supplier
+	 	ADD PRIMARY KEY (id_supplier);
+
+ADD COLUMN->	ALTER TABLE pelanggan
+		ADD telp varchar2(12);
+
+RENAME COLUMN->	ALTER TABLE pelanggan
+		RENAME COLUMN telp TO no_telp;
+
+MODIFY COLUMN->	ALTER TABLE pelanggan
+		MODIFY nomor varchar(50);
+
+DROP COLUMN->	ALTER TABLE pelanggan
+		DROP COLUMN no_telp;
+
+
+CONSTRAINT
+--------------------------
+KEY : PRIMARY, FOREIGN
+
+QUERY:
+1. set null
+2. restrict (default)
+3. cascade 
+4. do nothing
+
+
+CREATE TABLE tranksaksi (
+	id_tranksaksi number PRIMARY KEY,
+	id_barang number,
+	id_pelanggan number NOT NULL,
+	id_supplier number NOT NULL,
+	jumlah_barang number,
+	CONSTRAINT fk_barang FOREIGN KEY(id_barang) REFERENCES barang(id_barang),
+	CONSTRAINT fk_pelanggan FOREIGN KEY(id_pelanggan) REFERENCES pelanggan(id_pelanggan),
+	CONSTRAINT fk_supplier FOREIGN KEY(id_supplier) REFERENCES supplier(id_supplier)
+);
+	
+
+DROP 
+--------------------------
+
+DROP TABLE tranksaksi;
+
+
+	

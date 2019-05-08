@@ -1,0 +1,14 @@
+CONNECT SQL COMMAND MELALUI CMD
+------------------------------------
+
+sqlplus 
+
+[TEKAN ENTER]
+
+username
+
+[TEKAN ENTER]
+
+password
+
+[TEKAN ENTER]

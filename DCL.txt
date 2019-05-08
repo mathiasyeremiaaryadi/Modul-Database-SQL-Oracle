@@ -1,0 +1,69 @@
+DCL
+--------------------------
+
+
+CONNECT
+--------------------------
+Masuk sebagai user
+
+CONNECT username
+
+[TEKAN ENTER]
+
+password
+
+
+USER
+--------------------------
+Membuat user
+
+CREATE USER nama_user
+IDENTIFIED BY password;
+
+(password harus memiliki satu huruf di paling depan)
+
+CREATE USER andi
+IDENTIFIED BY password
+
+
+GRANT
+--------------------------
+Memberikan akses kepada user
+
+SESSION LOGIN
+--------------------------
+GRANT CREATE SESSION TO nama_user;
+
+GRANT CREATE SESSION TO andi;
+GRANT CONNECT TO andi;
+
+AKSES PREVILLEGE
+--------------------------
+GRANT previllege TO nama_tabel ON nama_user;
+
+GRANT CREATE TABLE TO andi;
+GRANT CREATE TABLE, UNLIMITED TABLESPACE TO andi;
+GRANT SELECT ON mhs TO andi;
+GRANT ALL ON mhs TO andi;		
+
+							
+REVOKE
+--------------------------
+Menarik akses dari satu user
+
+REVOKE SELECT ON nama_tabel FROM username;
+
+REVOKE SELECT ON mhs FROM andi;
+
+
+VIEW
+--------------------------
+Menduplikat tabel
+
+CREATE VIEW nama_tabel AS query;
+
+CREATE VIEW v_mhs AS SELECT * FROM local.mhs;
+
+DROP VIEW nama_tabel;
+
+DROP VIEW v_mhs;

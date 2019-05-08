@@ -1,0 +1,153 @@
+JOIN
+--------------------------
+
+INNER JOIN
+--------------------------
+
+Join ini adalah irisan.
+
+SELECT * 
+FROM A 
+INNER JOIN B 
+ON A.id = B.id;
+
+SELECT perkuliahan.id_mhs, matkul.nama_matkul
+FROM perkuliahan
+INNER JOIN matkul 
+ON perkuliahan.id_matkul = matkul.id_matkul;
+
+ALIAS
+--------------------------
+
+SELECT a.id_mhs, b.nama_matkul
+FROM perkuliahan a
+INNER JOIN matkul b
+ON a.id_matkul = b.id_matkul;
+
+LEFT JOIN
+--------------------------
+
+Join ini adalah sebelah kiri.
+
+SELECT * 
+FROM A 
+LEFT JOIN B 
+ON A.id = B.id;
+
+SELECT perkuliahan.id_mhs, matkul.nama_matkul
+FROM perkuliahan
+LEFT JOIN matkul 
+ON perkuliahan.id_matkul = matkul.id_matkul;
+
+ALIAS
+--------------------------
+
+SELECT a.id_mhs, b.nama_matkul
+FROM perkuliahan a
+LEFT JOIN matkul b
+ON a.id_matkul = b.id_matkul;
+
+RIGHT JOIN
+--------------------------
+
+Join ini adalah sebelah kanan.
+
+SELECT * 
+FROM A 
+RIGHT JOIN B 
+ON A.id = B.id;
+
+SELECT perkuliahan.id_mhs, matkul.nama_matkul
+FROM perkuliahan
+RIGHT JOIN matkul 
+ON perkuliahan.id_matkul = matkul.id_matkul;
+
+ALIAS
+--------------------------
+
+SELECT a.id_mhs, b.nama_matkul
+FROM perkuliahan a
+RIGHT JOIN matkul b
+ON a.id_matkul = b.id_matkul;
+
+FULL OUTER JOIN
+--------------------------
+
+Join ini adalah sebelah kanan.
+
+SELECT * 
+FROM A 
+JOIN B 
+ON A.id = B.id;
+
+SELECT perkuliahan.id_mhs, matkul.nama_matkul
+FROM perkuliahan
+JOIN matkul 
+ON perkuliahan.id_matkul = matkul.id_matkul;
+
+ALIAS
+--------------------------
+
+SELECT a.id_mhs, b.nama_matkul
+FROM perkuliahan a
+JOIN matkul b
+ON a.id_matkul = b.id_matkul;
+
+MULTI JOIN
+--------------------------
+
+SELECT * 
+FROM A 
+RIGHT JOIN B 
+ON A.id = B.id
+INNER JOIN C
+ON A.id = C.id;
+
+SELECT perkuliahan.id_mhs, matkul.nama_matkul
+FROM perkuliahan
+RIGHT JOIN matkul 
+ON perkuliahan.id_matkul = matkul.id_matkul
+INNER JOIN mahasiswa
+ON perkuliahan.id_mhs = mahasiswa.id_mhs;
+
+
+ALIAS
+--------------------------
+
+SELECT a.id_mhs, b.nama_matkul
+FROM perkuliahan a
+RIGHT JOIN matkul b
+ON a.id_matkul = b.id_matkul
+INNER JOIN mahasiswa c
+ON a.id_mhs = c.id_mhs;
+
+RELATIONAL
+--------------------------
+
+SELECT * 
+FROM A, B, C  
+WHERE A.id = B.id 
+AND A.id = C.id;
+
+
+SELECT perkuliahan.id_mhs, matkul.nama_matkul
+FROM perkuliahan, matkul, mahasiswa
+WHERE perkuliahan.id_matkul = matkul.id_matkul
+AND perkuliahan.id_mhs = mahasiswa.id_mhs;
+
+ALIAS
+--------------------------
+
+SELECT a.id_mhs, b.nama_matkul
+FROM perkuliahan a, matkul b, mahasiswa c
+WHERE 	a.id_matkul = b.id_matkul AND
+	a.id_mhs = c.id_mhs;
+
+
+	
+
+
+
+
+
+	

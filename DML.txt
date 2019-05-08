@@ -1,0 +1,80 @@
+DML
+--------------------------
+
+INSERT
+--------------------------
+
+INSERT ALL COLUMN -> 		INSERT INTO nama_tabel 
+				VALUES (nilai1, nilai2, nilai3);
+
+INSERT SPESIFIK COLUMN ->	INSERT INTO nama_tabel(nama_kolom1, nama_kolom2)
+				VALUES (nilai1, nilai2);
+
+INSERT SEKALIGUS ->		INSERT ALL
+				INTO nama_tabel1 VALUES (nilai1, nilai2)
+				INTO nama_tabel2 VALUES (nilai1, nilai2)
+				INTO nama_tabel3 VALUES (nilai1, nilai2)
+				INTO nama_tabel4 VALUES (nilai1, nilai2) 
+				SELECT * FROM dual;
+
+
+UPDATE
+--------------------------
+
+
+UPDATE ALL ->		UPDATE nama_table SET
+				nama_kolom1 = nilai1,
+				nama_kolom2 = nilai2,
+				nama_kolom3 = nilai3;
+
+UPDATE SPESIFIK ->	UPDATE nama_table SET
+				nama_kolom1 = nilai1,
+				nama_kolom2 = nilai2,
+				nama_kolom3 = nilai3; 
+			WHERE nama_kolom = nilai
+
+
+DELETE
+--------------------------
+
+DELETE ALL ->		DELETE FROM nama_tabel;
+
+DELETE SPESIFIK ->	DELETE FROM nama_tabel WHERE nama_kolom = nilai; 
+
+
+SELECT
+--------------------------
+
+SELECT ALL ->		SELECT * FROM nama_tabel;
+
+SELECT SPESIFIK ->	SELECT nama_kolom1, nama_kolom2 FROM nama_tabel;
+
+
+WHERE CLAUSE
+--------------------------
+
+WHERE ->	SELECT * FROM nama_tabel WHERE nama_kolom = nilai1;
+		SELECT * FROM nama_tabel WHERE nama_kolom != nilai1;
+
+IN ->		SELECT * FROM nama_tabel WHERE nama_kolom IN (nilai1, nilai2);
+		SELECT * FROM nama_tabel WHERE nama_kolom NOT IN (nilai2, nilai2);
+
+IS NULL ->	SELECT * FROM nama_tabel WHERE nama_kolom IS NULL;
+		SELECT * FROM nama_tabel WHERE nama_kolom IS NOT NULL;
+
+LOGIGKA ->	SELECT * FROM nama_tabel WHERE kondisi1 AND kondisi2
+		SELECT * FROM nama_tabel WHERE kondisi1 OR kondisi2
+
+LIKE ->		SELECT * FROM nama_tabel WHERE nama_kolom LIKE "%a"; (belakang)
+		SELECT * FROM nama_tabel WHERE nama_kolom LIKE "a%"; (depan)
+		SELECT * FROM nama_tabel WHERE nama_kolom LIKE "%a%"; (antara)
+		SELECT * FROM nama_tabel WHERE nama_kolom LIKE "_a%"; (urutan huruf)
+		SELECT * FROM nama_tabel WHERE nama_kolom NOT LIKE "a%";
+
+AGREGASI 
+--------------------------
+
+
+
+
+	

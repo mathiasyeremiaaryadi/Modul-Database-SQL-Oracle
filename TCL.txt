@@ -1,0 +1,20 @@
+TCL MEMILIKI 3 JENIS PERINTAH
+1. COMMIT
+------------------------------
+Commit artinya menyelesaikan proses dalam locking, agar proses lain bisa di eksekusi. 
+
+COMMIT;
+
+2. ROLLBACK
+------------------------------
+Rollback artinya membalikan proses pada locking sampai commit paling terakhir. 
+
+Rollback commit terakhir -> ROLLBACK;
+Rollback savepoint -> ROLLBACK TO nama_save_point;
+
+3. SAVEPOINT
+-----------------------------
+Savepoint artinya menandai batas akhir dari proses, sehingga tidak perlu rollback sampai commit terakhir.
+
+SAVEPOINT nama;
+SAVEPOINT Save1;
